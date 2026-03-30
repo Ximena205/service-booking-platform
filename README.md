@@ -1,16 +1,38 @@
-# React + Vite
+# Lavadero Booking MVP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para reserva de turnos de un lavadero de autos.
 
-Currently, two official plugins are available:
+## Objetivo
+Permitir que un cliente vea servicios, precios y horarios disponibles, y pueda reservar un turno desde una web responsive.  
+El administrador puede visualizar y gestionar las reservas desde el celular.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
+- React + Vite
+- Tailwind CSS
+- Supabase
+- Netlify
 
-## React Compiler
+## Funcionalidades fase 1
+- Visualización de servicios y precios
+- Reserva de turnos
+- Confirmación de reserva
+- Panel administrador básico
+- Link a WhatsApp con mensaje prearmado
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Estructura
+- `src/`: frontend
+- `supabase/`: esquema SQL y seeds
+- `netlify.toml`: configuración de deploy
 
-## Expanding the ESLint configuration
+## Variables de entorno
+Crear un archivo `.env.local` con:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```env
+VITE_SUPABASE_URL=tu_url
+VITE_SUPABASE_PUBLISHABLE_KEY=tu_publishable_key
+
+## Scripts
+```bash
+npm install
+npm run dev
+npm run build
